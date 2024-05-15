@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wetter App</title>
+    <title>Wolkenwächter</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
 </head>
 <body>
+    <h1 class="title">Wolkenwächter</h1>
     <div class="container">
-        <h1>Wetter App</h1>
-        <div class="search">
+        <div class="search-container">
             <input type="text" id="city-input" placeholder="Ort eintragen">
-            <button onclick="getWeather()">Zeige Wetter</button>
+            <button id="search-button"><img src="icons/search-icon.png" alt="Search"></button>
+        </div>
+        <div id="current-weather" class="current-weather">
+            <img id="current-weather-icon" src="" alt="Weather Icon">
+            <p id="current-temperature" class="current-temperature"></p>
+            <p id="current-location" class="current-location"></p>
+
         </div>
         <div id="weather-info" class="weather-info">
-            <h2 id="city-name"></h2>
-            <div id="current-weather" class="current-weather">
-                <p id="temperature"></p>
-                <p id="description"></p>
-            </div>
             <div id="forecast" class="forecast"></div>
         </div>
     </div>
