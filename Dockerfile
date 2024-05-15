@@ -1,8 +1,7 @@
-# Verwende das offizielle NGINX-Basisimage von Docker Hub
-FROM nginx:latest
+# Verwende einen Nginx-Base-Image
+FROM nginx:alpine
 
-# Kopiere die lokale HTML-Datei in das Image
-COPY index.html /usr/share/nginx/html/index.html
-
-# Konfiguriere NGINX für den Zugriff auf Port 80
-EXPOSE 80
+# Kopiere die HTML-, CSS- und JavaScript-Dateien in das Nginx-Standardverzeichnis
+COPY index.html /usr/share/nginx/html
+COPY style.css /usr/share/nginx/html
+COPY app.js /usr/share/nginx/html
